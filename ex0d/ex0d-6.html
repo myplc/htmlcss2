@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>속성선택자</title>
@@ -7,33 +8,34 @@
         h3[class] {
             color: blue
         }
+
         p[class|="icox"] {
             color: red
         }
-        p[class*="icox"] {
+
+        /* p[class*="icox"] {
             color: red
-        }
-/*
+        } */
+        /*
         p[class$="icox"] {
             color: red
         }
 */
-/*
+        /*
         p[class^="icox"] {
             color: red
         }
 */
-/*
+        /*
         p[class~="icox"] {
             color: red
         }
 */
-/*
+        /*
         p[class="icox"] {
             color: red
         }
 */
-        
     </style>
 </head>
 
@@ -48,4 +50,6 @@
         <p class="I icox U">금전출납부를 작성합니다.</p>
         <p class="icox-1">손익계산서를 작성합니다.</p>
     </body>
-</body></html>
+</body>
+
+</html>
