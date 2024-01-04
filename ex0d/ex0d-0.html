@@ -8,8 +8,23 @@
         /*        div p{ div의 자손 p에 적용*/
         /*        div+p{ div의 형제 p에 적용*/
         /*        div>p{ div의 바로아래 p에만 적용*/
-        div {
+        /* p {
             color: red
+        }
+
+        div p {
+            color: black
+        }
+
+        span p {
+            color: green;
+        } */
+        div {
+            color: red;
+        }
+
+        div * {
+            color: black;
         }
     </style>
 </head>
