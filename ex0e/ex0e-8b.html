@@ -12,6 +12,7 @@
             height: 100%;
             margin: 0;
             padding: 0;
+
         }
 
         global {
@@ -20,10 +21,12 @@
             height: 15%;
             background-color: #f19292;
             border: 5px solid red;
+            box-sizing: border-box;
         }
 
         main {
             height: 85%;
+
         }
 
         left {
@@ -33,27 +36,34 @@
             width: 20%;
             height: 100%;
             border: 5px solid violet;
+            box-sizing: border-box;
+
         }
 
         content {
             float: left;
-            width: calc(80% - 10px);
+            width: 80%;
+            /* width: calc(80% - 10px); */
             height: 100%;
         }
 
         article {
             background-color: #48c7cb;
             width: 100%;
-            height: calc(80% - 5px);
+            height: 80%;
+            /* height: calc(80% - 5px); */
             border: 5px solid blue;
+            box-sizing: border-box;
         }
 
         comment {
             display: block;
             background-color: #a07ced;
             width: 100%;
-            height: calc(20% - 5px);
+            height: 20%;
+            /* height: calc(20% - 5px); */
             border: 5px solid green;
+            box-sizing: border-box;
         }
     </style>
 </head>
