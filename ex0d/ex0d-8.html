@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>가상선택자 응용</title>
+    <style>
+        h2 {
+            background-color: darkseagreen;
+            width: 295px;
+            height: 35px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 3px;
+
+        }
+
+        #wrapper {
+            width: 295px;
+            height: 210px;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        [class] {
+            float: left;
+            width: 30px;
+            height: 30px;
+            border: 1px solid blue;
+            margin: 5px
+        }
+
+        /*    7의 배수이면서 4를 더한 값부터*/
+        div:nth-of-type(7n+4) {
+            color: red
+        }
+
+        /*    26이후 부터 선택*/
+        div:nth-of-type(n+26) {
+            background-color: darksalmon
+        }
+
+        /*    처음부터 8까지 선택*/
+        div:nth-of-type(-n+8) {
+            background-color: yellow
+        }
+
+        div:nth-of-type(n+13):nth-of-type(-n+16) {
+            color: blue;
+            background-color: aqua
+        }
+    </style>
+</head>
+
+<body>
+    <h2>2024년 2월 달력</h2>
+    <div id="wrapper">
+        <p class="e"></p>
+        <p class="e"></p>
+        <p class="e"></p>
+        <p class="e"></p>
+        <div class="box">1</div>
+        <div class="b3o2x">2</div>
+        <div class="b1ox">3</div>
+        <div class="b312ox4">5</div>
+        <div class="bo2x">6</div>
+        <div class="b3ox">7</div>
+        <div class="box">8</div>
+        <div class="2bo2x3">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="b3ox">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="bo4x">15</div>
+        <div class="b3ox">16</div>
+        <div class="box">17</div>
+        <div class="bo2x">18</div>
+        <div class="bo2x">19</div>
+        <div class="b3ox">20</div>
+        <div class="box">21</div>
+        <div class="box">22</div>
+        <div class="box">23</div>
+        <div class="box">24</div>
+        <div class="box">25</div>
+        <div class="box">26</div>
+        <div class="box">27</div>
+        <div class="box">28</div>
+        <div class="box">29</div>
+        <p class="e"></p>
+        <p class="e"></p>
+    </div>
+</body>
+
+</html>

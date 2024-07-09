@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aside,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            height: 300vh;
+        }
+
+        .aside {
+            position: fixed;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            color: white;
+            width: 220px;
+            list-style-type: none;
+            background-color: black;
+            position: relative;
+        }
+
+        div ul li {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: bold;
+            position: relative;
+            padding: 20px;
+            border-bottom: 1px solid #fff;
+        }
+
+        ul ul {
+            display: none;
+        }
+
+        div>ul>li:hover>ul {
+            display: block;
+            /* position: relative; */
+            position: absolute;
+            background-color: #888;
+            top: 0;
+            /* 2차 메뉴의 상단을 1차 메뉴의 상단에 고정 */
+            left: 100%;
+            /* 2차 메뉴를 1차 메뉴의 너비만큼 이동 */
+            width: 100%;
+        }
+
+        div>ul>li:hover,
+        div>ul>li>ul>li:hover {
+            background-color: darkseagreen
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="aside">
+
+        <ul>
+            <li>menu1
+                <ul>
+                    <li>text1</li>
+                    <li>text2</li>
+                    <li>text3</li>
+                    <li>text4</li>
+                </ul>
+            </li>
+            <li>menu2
+                <ul>
+                    <li>text1</li>
+                    <li>text2</li>
+                    <li>text3</li>
+                    <li>text4</li>
+                </ul>
+            </li>
+            <li>menu3
+                <ul>
+                    <li>text1</li>
+                    <li>text2</li>
+                    <li>text3</li>
+                    <li>text4</li>
+                </ul>
+            </li>
+            <li>menu4
+                <ul>
+                    <li>text1</li>
+                    <li>text2</li>
+                    <li>text3</li>
+                    <li>text4</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
