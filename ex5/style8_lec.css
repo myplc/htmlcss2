@@ -10,6 +10,12 @@ body{
      color:yellow;
 background:url(https://th.bing.com/th/id/R.18c0fe1f1a242443b5b248b317b6242c?rik=hh81Bf9L0GcQrg&riu=http%3a%2f%2fplaywares.com%2ffiles%2fattach%2fimages%2f423601%2f260%2f509%2f003%2f478bd14d363976f0a87c6c34d093ca2e.jpg&ehk=6MPPDSrFA04KnQAkWIU%2f4id0OcZXm3hEpoEi9dp2gSM%3d&risl=&pid=ImgRaw&r=0)
 }
+h1{
+ 
+  border-bottom: 1px solid rgb(255, 255, 255) !important;
+  padding: 10px;
+}
+
 }
 
 
@@ -21,4 +27,11 @@ h1{
 }
 span{
   padding: 5px;
+}
+
+/* 아래는 별도로 팁 */
+hr {
+  border: none; /* 기본 테두리를 제거합니다 */
+  height: 1px; /* 선의 높이를 설정합니다 */
+  background-color: white; /* 선의 색상을 흰색으로 설정합니다 */
 }

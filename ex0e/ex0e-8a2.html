@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 310px;
+        }
+
+        header,
+        footer {
+            width: 300px;
+            height: 40px;
+            border: 2px solid rgb(69, 15, 35);
+            background-color: rgb(136, 191, 81);
+        }
+
+        nav {
+            border: 2px solid red;
+            width: 50px;
+            height: 254px;
+            background-color: burlywood;
+            float: left;
+        }
+
+        main {
+            width: 250px;
+            margin-left: 54px;
+        }
+
+        article {
+            height: 200px;
+            border: 2px solid rgb(1, 25, 81);
+            background-color: rgb(142, 172, 227);
+        }
+
+        section {
+            border: 2px solid rgb(123, 56, 164);
+            height: 50px;
+            background-color: rgb(255, 235, 155);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div.box>header{header}+div>nav{nav}+main>article{article}+section{section}^^footer{footer} -->
+    <div class="box">
+        <header>header</header>
+        <div>
+            <nav>nav</nav>
+            <main>
+                <article>article</article>
+                <section>section</section>
+            </main>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>
