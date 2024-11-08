@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Swap</title>
+    <style>
+        html,
+        body {
+            min-width: 700px;
+        }
+
+        main {
+            border: 1px solid #222;
+            display: flex;
+            width: 700px;
+            box-sizing: content-box;
+        }
+
+        .side1 {
+            margin: 10px 10px 50px;
+            width: 200px;
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .way {
+            flex: 1;
+        }
+
+        .side2 {
+            margin: 50px 10px;
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: beige;
+        }
+
+        main>div>div {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            width: 100px;
+            height: 80px;
+            border: 2px solid white;
+            border-radius: 15px;
+            background-color: steelblue;
+            box-sizing: border-box;
+            cursor: grab;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="side1">
+            <div draggable="true"></div>
+            <div draggable="true"></div>
+            <div draggable="true"></div>
+            <div draggable="true"></div>
+            <div draggable="true"></div>
+            <div draggable="true"></div>
+            <div draggable="true"></div>
+            <div draggable="true"></div>
+        </div>
+        <div class="way"></div>
+        <div class="side2">
+            <div draggable="true">박주영</div>
+            <div draggable="true">B조 컴</div>
+            <div draggable="true">B조 컴</div>
+            <div draggable="true"></div>
+            <div draggable="true">김도형</div>
+            <div draggable="true">B조 컴</div>
+            <div draggable="true">이상진</div>
+            <div draggable="true">B조 컴</div>
+            <div draggable="true">유대현</div>
+            <div draggable="true">A조 컴</div>
+            <div draggable="true">이다경</div>
+            <div draggable="true">A조 컴</div>
+            <div draggable="true">전지은</div>
+            <div draggable="true">A조 컴</div>
+            <div draggable="true">박세혁</div>
+            <div draggable="true">A조 컴</div>
+            <div draggable="true"></div>
+            <div draggable="true"></div>
+            <div draggable="true">선생님</div>
+            <div draggable="true"></div>
+        </div>
+    </main>
+
+    <script>
+        let draggedElement = null;
+
+        // 드래그 시작 이벤트 핸들러
+        document.querySelectorAll('[draggable="true"]').forEach((item) => {
+            item.addEventListener("dragstart", (event) => {
+                draggedElement = event.target; // 드래그한 요소 저장
+                event.target.classList.add("dragging");
+            });
+
+            item.addEventListener("dragend", () => {
+                draggedElement.classList.remove("dragging");
+                draggedElement = null; // 드래그 종료 시 초기화
+            });
+        });
+
+        // 드래그된 요소가 놓일 수 있는 자리인지 검사 후 위치 교환
+        document.querySelectorAll(".side1 div, .side2 div").forEach((target) => {
+            target.addEventListener("dragover", (event) => {
+                event.preventDefault();
+            });
+
+            target.addEventListener("drop", (event) => {
+                event.preventDefault();
+
+                if (draggedElement && draggedElement !== target) {
+                    // 드래그된 요소와 드롭된 요소의 부모 교환
+                    let draggedContent = draggedElement.innerHTML;
+                    draggedElement.innerHTML = target.innerHTML;
+                    target.innerHTML = draggedContent;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
