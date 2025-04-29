@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow-wrap 조합 예제</title>
+    <style>
+        .box {
+            width: 250px;
+            height: 60px;
+            border: 2px solid #2196F3;
+            padding: 10px;
+            margin: 20px;
+            font-size: 16px;
+
+            /* 텍스트 처리 속성 */
+            overflow-wrap: break-word;
+            /* 긴 단어 줄바꿈 */
+            white-space: normal;
+            /* 기본 줄바꿈 허용 */
+            overflow: hidden;
+            /* 넘치는 부분 숨김 */
+            text-overflow: ellipsis;
+            /* 넘치면 ... 표시 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>텍스트 처리 예제 (overflow-wrap + 기타 속성)</h2>
+
+    <div class="box">
+        supercalifragilisticexpialidociousisaverylongwordthatexceedsboxlimit and this is a long sentence to test how
+        text behaves in a small box.
+    </div>
+
+</body>
+
+</html>
